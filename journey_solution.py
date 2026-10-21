@@ -56,7 +56,6 @@ class Journey:#(s)
 
         reference["Date"] = pd.to_datetime(reference["Date"], format="%Y-%m-%d %H:%M:%S.%f")
         other["Date"] = pd.to_datetime(other["Date"], format="%m/%d/%Y %H:%M:%S.%f")
-        other["Class Scheme"] = reference["Class Scheme"].iloc[0]
 
         other = other[reference.columns]
         df_merged = pd.concat([reference, other], ignore_index=True)
